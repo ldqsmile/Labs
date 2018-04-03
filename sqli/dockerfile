@@ -1,0 +1,20 @@
+FROM ubuntu:14.04
+
+RUN apt-get update \
+    && apt-get install -y apache2 \
+    && apt-get install -y php5 libapache2-mod-php5 \
+    && apt-get install -y php5-mysql php5-sqlite php5-tidy \
+    && apt-get install -y mysql-server \
+    && apt-get install -y mysql-client \
+    && apt-get install -y git
+
+RUN git clone https://github.com/ldqsmile/sqli-labs.git /var/www/html/sqli-labs
+
+COPY start.sh /start.sh
+
+RUN chmod 700 /start.sh
+
+WORKDIR /var/www/html
+EXPOSE 80
+
+CMD ["/start.sh" ]

@@ -1,0 +1,9 @@
+version: '3'
+services:
+ web:
+   image: sqli-labs
+   container_name: sqli-labs
+   build: .
+   ports:
+    - "10080:80"
+   restart: always

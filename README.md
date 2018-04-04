@@ -1,5 +1,5 @@
 # Labs
-使用docker建立学习sqli等的虚拟环境，无需docker知识，运行简单命令即可。
+使用docker建立学习sqli等的虚拟环境，无需docker知识，运行简单命令即可。     
 在ubuntu16.04下安装docker/docker-compose:
 ## Installation
 ```
